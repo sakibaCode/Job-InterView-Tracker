@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="mx-20 my-10">
+
+    <h1 class="text-4xl font-bold mb-8">Job Application Tracker</h1>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-3 gap-5 mb-10">
+        <div class="border rounded-xl p-5">
+            <h2 id="totalCount" class="text-3xl text-yellow-500 font-bold">0</h2>
+            <p>Total</p>
+        </div>
+
+        <div class="border rounded-xl p-5">
+            <h2 id="interviewCount" class="text-3xl text-green-600 font-bold">0</h2>
+            <p>Interview</p>
+        </div>
+
+        <div class="border rounded-xl p-5">
+            <h2 id="rejectedCount" class="text-3xl text-red-600 font-bold">0</h2>
+            <p>Rejected</p>
+        </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="mb-8 space-x-3">
+        <button id="all-filter-btn" class="filter-btn bg-black text-white px-4 py-2 rounded">
+            All
+        </button>
+
+        <button id="interview-filter-btn" class="filter-btn bg-gray-300 px-4 py-2 rounded">
+            Interview
+        </button>
+
+        <button id="rejected-filter-btn" class="filter-btn bg-gray-300 px-4 py-2 rounded">
+            Rejected
+        </button>
+    </div>
+
+    <!-- Job Cards -->
+    <div id="jobContainer" class="space-y-6">
+
+        <!-- Job Card -->
+        <div class="job-card border rounded-xl p-6 flex justify-between" data-status="applied">
+            <div>
+                <h3 class="text-xl font-semibold">Frontend Developer</h3>
+                <p class="text-gray-600">Company: ABC Tech</p>
+                <p class="status mt-2 px-3 py-1 inline-block bg-gray-300 rounded">
+                    Applied
+                </p>
+
+                <div class="mt-4 space-x-3">
+                    <button class="interview-btn border border-green-600 text-green-600 px-3 py-1 rounded">
+                        Interview
+                    </button>
+
+                    <button class="reject-btn border border-red-600 text-red-600 px-3 py-1 rounded">
+                        Rejected
+                    </button>
+                </div>
+            </div>
+
+            <button class="delete-btn text-red-500 text-xl hover:text-red-700">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
