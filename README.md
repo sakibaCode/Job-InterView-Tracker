@@ -1,31 +1,33 @@
-**1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?**
-- getElementById : Get a single element by "id" : Returns a single "DOM Element"
-- getElementByClassName : Get all elements with a specific class : Return a "Array"
-- querySelector : Returns first matching element.
-- querySelectorAll : Returns NodeList of all matches
+#  Job Interview Tracker
 
-**2.How do you create and insert a new element into the DOM?**
+A clean, lightweight web app to track your job applications.Stay organized during your job search by monitoring application statuses, interview progress, and rejections all in one place.
 
-- const element = document.createElement("div")
-  element.textContent = "Hello"
-  document.body.appendChild(element)
+## Preview:
+<img width="1883" height="906" alt="image" src="https://github.com/user-attachments/assets/24e1c9ef-2bd3-45cd-9222-74f38d2d5e15" />
 
-**3. What is Event Bubbling? And how does it work?**
 
-- Event Bubbling is when an event starts from the last target element and then propagates upward through its parent elements until it reaches the document root.
+---
 
-- For example : Clicking a <button> inside a <div> triggers the button’s click handler first, then the <div>’s handler, then <body>, and continues up the DOM tree.
+##  Features
 
-**4. What is Event Delegation in JavaScript? Why is it useful?**
+- **Dashboard Summary** — At-a-glance stats showing total applications, interviews scheduled, and rejections
+- **Application Cards** — Each job listing displays the company name, role, location, job type, salary range, and description
+- **Status Tracking** — Mark applications as *Interview* or *Rejected* with a single click
+- **Filter View** — Filter your job list by All, Interview, or Rejected
+- **Delete Applications** — Remove listings you no longer need
+- **Job Count** — Always know how many jobs you're tracking
 
-- Event Delegation is a technique of attaching a single event listener to a parent element instead of each child,
- and then using the event’s target to handle actions on the specific child that was interacted with.
-- Usefulness:
-  1.Less Memory
-  2.Work for dynamic elements also
-  3.Simpler Code
-  
-**5. What is the difference between preventDefault() and stopPropagation() methods?**
+---
 
-- preventDefault(): stops the browser action.
-- stopPropagation(): stops the event from reaching other elements.
+##  Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| HTML | App structure |
+| JavaScript | App logic & interactivity |
+| Tailwind CSS | Styling & layout |
+
+---
+
+## Live Demo 
+https://job-inter-view-tracker.vercel.app/
